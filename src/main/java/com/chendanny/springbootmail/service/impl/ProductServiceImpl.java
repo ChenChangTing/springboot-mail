@@ -1,5 +1,6 @@
 package com.chendanny.springbootmail.service.impl;
 
+import com.chendanny.springbootmail.constant.ProductCategory;
 import com.chendanny.springbootmail.dao.ProductDao;
 import com.chendanny.springbootmail.dto.ProductRequest;
 import com.chendanny.springbootmail.model.Product;
@@ -16,8 +17,8 @@ public class ProductServiceImpl implements ProductService {
     private ProductDao productDao;
 
     @Override
-    public List<Product> getProducts() {
-        return productDao.getProducts();
+    public List<Product> getProducts(ProductCategory category,String search) {
+        return productDao.getProducts(category,search);
     }
 
     @Override
