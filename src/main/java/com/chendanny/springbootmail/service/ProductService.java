@@ -7,4 +7,6 @@ import com.chendanny.springbootmail.model.Product;
 public interface ProductService {
     Product getProductById(Integer productId);
     Integer createProduct(ProductRequest productRequset);
+
+    void updateProduct(Integer productId,ProductRequest productRequest);
 }
